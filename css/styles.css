@@ -1,0 +1,240 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 247, 232);
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* Hide the link by default */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* display the link when it has focus */
+.skip-to-main:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background: lightyellow;
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Style the link to make it visually hidden, but accessible*/
+
+.skip-to-main:focus, .skip-to-main:active {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: blue;
+    font-weight: normal;
+}
+
+nav a.current {
+    font-weight: bold;
+    color: #ffff00;
+    background: rgb(70, 68, 68);
+    font-family: serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    grid-column-gap: 5px;
+    padding: 15px;
+    width: auto;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgb(254, 254, 216)
+}
+
+.grid > ul > li > a {
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+}
+
+.welcome-message {
+    border: 2px dotted brown;
+    margin: 10px;
+    padding: 5px;
+}
+
+img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#main.grid-container {
+    grid-gap: 20px;
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgb(251, 251, 200);
+}
+
+.travel-container h3 {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+#main.grid-container img {
+    max-width: 100%;
+}
+
+
+h1 {
+    border: 2px dashed black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    border: 2px dashed black;
+    border-radius: 10px;
+    display: block;
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+h3 {
+    display: block;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.travel-container > h3 {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.travel-container img {
+    margin: 5px;
+}
+
+h4 {
+    display: block;
+    margin: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.welcome-message {
+    color: darkblue;
+}
+
+p {
+    color: black;
+}
+
+
+
+Main Content Styles with CSS Grid
+
+#main {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    padding: 25px;
+    grid-column-gap: 5px;
+    width: auto;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgb(255, 255, 197)
+}
+
+/* #main p {
+    color: red;
+} */
+
+footer {
+    background-color: #333;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+} 
+
+main {
+    font-family: Arial;
+    font-size: 20px;
+    margin: 5px;
+    text-align:left;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* do I need a media query for mobile to separate it from tablet view? or do we not need this since it is mobile-first*/
+
+/* Tablet view - portrait mode */
+@media (min-width:768px) {
+    * {
+        animation: none;
+        transition: none;
+        background-color: green;
+    }
+}
+
+/* Tablet view  */
