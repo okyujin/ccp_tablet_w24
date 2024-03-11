@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes</title>
+    <title>Travel</title>
     <link rel = "stylesheet" href = "css/html5reset.css">
     <link rel = "stylesheet" href = "css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function toggleNav() {
+            var navLinks = document.querySelector('nav ul');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <a href = "#main" class = "skip-to-main"> Skip to Main Content</a>
     <header>
+
         <nav class="grid">
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -17,7 +25,11 @@
                 <li><a href = "recipes.html" class="current">Recipes</a></li>
                 <li><a href = "travel.html">Travel</a></li>
             </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
+
         <h1>Week Two discussion</h1>
     </header>
 
@@ -101,7 +113,6 @@
             <img src="images/avocado_chips.jpg" width = "400" alt="Chips and guacamole">
             <img src="images/taco.jpg" width = "400" alt = "Guacamole in a taco">
             <img src="images/guacamole_2.jpg" width = "400" alt = "Guacamole in a bowl">
-            
             <h4> By: Yiran Zheng</h4>
         </div>
 

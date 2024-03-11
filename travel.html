@@ -6,10 +6,18 @@
     <title>Travel</title>
     <link rel = "stylesheet" href = "css/html5reset.css">
     <link rel = "stylesheet" href = "css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function toggleNav() {
+            var navLinks = document.querySelector('nav ul');
+            navLinks.classList.toggle('show');
+        }
+    </script>
 </head>
 <body>
     <a href = "#main" class = "skip-to-main"> Skip to Main Content</a>
     <header>
+
         <nav class="grid">
             <ul>
                 <li><a href = "index.html">Home</a></li>
@@ -17,14 +25,16 @@
                 <li><a href = "recipes.html">Recipes</a></li>
                 <li><a href = "travel.html" class="current">Travel</a></li>
             </ul>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
+
         <h1>Week Two discussion</h1>
     </header>
 
     <main id = "main" class = "grid-container"> 
         <h2>Travel</h2>
-
-
         <div class = "travel-container">
             <h2> Yellowstone National Park </h2>
                 <h3> Geographical Location: Wyoming, Montana, and Idaho, United States </h3>
@@ -36,35 +46,37 @@
                     </p>
 
                 <h3> Photo Gallery</h3>
-                <figure>
+                <div class = "photo-container">
+
+                <figure class = "photo photo1">
                     <img src="images/yellowstone_travertine.JPG" width = "400" alt="A large mound of multi-colored travertine">
-                    <figcaption> Mammoth Hot Springs has a number of actively forming Travertine terraces. </figcaption>
+                    <figcaption class = "photo caption"> Mammoth Hot Springs has a number of actively forming Travertine terraces. </figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo photo2">
                     <img src="images/yellowstone_sunset.jpg" width = "400" alt="Sunset over mountains with some charred trees in the foreground">
-                    <figcaption> The drive to Lamar Valley requires some dangerous roads.  But the result is amazing sunset views.</figcaption>
+                    <figcaption class = "photo caption"> The drive to Lamar Valley requires some dangerous roads.  But the result is amazing sunset views.</figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo photo3">
                     <video width="200"  controls>
                         <source src="images/yellowstone_prism.MOV">
                         Your browser does not support the video tag.  This was a video of the multicolored layers getting their hues from different species of bacteria living in the cooler water around the spring.
                     </video>
                 </figure>
 
-                <figure>
+                <figure class = "photo photo4">
                     <video width="200" controls>
                         <source src="images/yellowstone_buffalo.MOV">
                         Your browser does not support the video tag. This was a video of the buffalo so common along the roads in Yellowstone that our mantra became "If it ain't lickin the car, we aren't stopping"
                     </video>
                 </figure>
 
-                <figure>
+                <figure class = "photo photo5">
                     <img src="images/yellowstone_sulphur_springs.JPG" width = "400" alt="A large spring with clouds of sulfur smoke rising from it.">
-                    <figcaption> If you can handle the odor, the Yellowstone Sulphur Springs is a great place to hike. </figcaption>
+                    <figcaption class = "photo caption"> If you can handle the odor, the Yellowstone Sulphur Springs is a great place to hike. </figcaption>
                 </figure>
-
+            </div>
                 <h4> By: Colleen van Lent</h4>
         </div>
 
@@ -84,25 +96,27 @@
                     </p>
 
                 <h3> Photo Gallery</h3>
-                <figure>
+                <div class = "photo-container">
+                <figure class = "photo">
                     <img src="images/Monteverde_cloud_forest.jpeg" width = "400" alt="Clouds rolling through a line of trees">
                     <figcaption> You can hike trails and zipline through the Monteverde cloud forests. </figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/Monteverde_hanging_bridges.jpeg" width = "400" alt="An image of a bridge hanging above the cloud forest canopy in Monteverde.">
                     <figcaption> Hanging bridges over the cloud forests allow for a birds-eye view.</figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/Monteverde_hummingbirds.jpeg" width = "400" alt="A hummingbird with green feathers drinking from a pink and orange flower.">
                     <figcaption> You can visit hummingbirds at Monteverde’s Selvatura Park’s hummingbird garden, which exhibits over 14 different species of hummingbird.</figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/Monteverde_el_tigre_waterfalls.jpeg" width = "400" alt="A person in red standing in front of one of El Tigre’s four waterfalls.">
                     <figcaption> El Tigre Waterfalls is made up of four falls, which are connected by trails and hanging bridges. </figcaption>
                 </figure>
+            </div>
 
                 <h4> By: Kay Malan </h4>
         </div>
@@ -128,26 +142,27 @@
                 </figure>
 
                 <h3> Photo Gallery</h3>
-
-                <figure>
+                <div class = "photo-container">
+                    <figure class = "photo">
                     <img src="images/trevi-fountain-rome.jpg" width = "400" alt="A decorated marble fountain with several roman statues dancing.">
                     <figcaption> A decorated marble fountain with several roman statues dancing. </figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/vatican-rome.jpg" width = "400" alt="An aerial view of a circular forum outlined with ornate columns">
                     <figcaption> An aerial view of a circular forum outlined with ornate columns </figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/spanish-steps-rome.jpg" width = "400" alt="Decorative steps sitting behind a fountain with a small church at the top.">
                     <figcaption> Decorative steps sitting behind a fountain with a small church at the top. </figcaption>
                 </figure>
 
-                <figure>
+                <figure class = "photo">
                     <img src="images/roman-forum-rome.webp" width = "400" alt="A ruin of large columns supporting a roof surrounded by smaller ruins.">
                     <figcaption> A ruin of large columns supporting a roof surrounded by smaller ruins. </figcaption>
                 </figure>
+                </div>
 
                 <h4> By: Frank Pelosi</h4>
         </div>

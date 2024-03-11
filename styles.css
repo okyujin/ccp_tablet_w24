@@ -1,0 +1,321 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(247, 247, 232);
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
+
+/* SKIP TO MAIN */
+/* Hide the link by default */
+.skip-to-main {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* display the link when it has focus */
+.skip-to-main:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    background: rgb(225, 163, 39);
+    font-size: 20px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* Style the link to make it visually hidden, but accessible*/
+.skip-to-main:focus, .skip-to-main:active {
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: visible;
+}
+
+/* MOBILE NAV BAR - hamburger implemented just for mobile */
+nav .grid {
+    overflow: hidden;
+    position: relative;
+}
+
+nav ul li a {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 3px solid rgb(240, 113, 113);
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background-color: blue;
+    color: yellow;
+}
+
+/* hamburger */
+nav .grid a.icon {
+    float: right;
+    display: block; /* for hamburger to be visible */
+}
+
+
+/* Hide all navigation links by default */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; 
+}
+
+/* Display the hamburger icon */
+nav .icon i {
+    color: rgb(240, 52, 52);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Show the navigation links when the hamburger icon is clicked */
+nav .show {
+    display: block;
+}
+
+
+
+
+/* BODY */
+.welcome-message {
+    border: 2px dotted brown;
+    margin: 10px;
+    padding: 5px;
+}
+
+img {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#main.grid-container {
+    grid-gap: 20px;
+    padding: 25px;
+    font-size: 20px;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgb(246, 226, 200);
+}
+
+.travel-container h3 {
+    display: flex;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-gap: 10px;
+}
+
+
+
+
+h1 {
+    border: 2px dashed black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    display: block;
+}
+
+h2 {
+    border: 2px dashed black;
+    border-radius: 10px;
+    display: block;
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+h3 {
+    display: block;
+    margin: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.travel-container > h3 {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.travel-container img {
+    margin: 5px;
+}
+
+h4 {
+    display: block;
+    margin: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.welcome-message {
+    color: darkblue;
+}
+
+p {
+    color: black;
+}
+
+
+
+Main Content Styles with CSS Grid
+
+#main {
+    display: grid;
+    grid-template-columns: 100px 100px;
+    padding: 25px;
+    grid-column-gap: 5px;
+    width: auto;
+    text-align: center;
+    font-size: 25px;
+    border: 2px solid blue;
+    border-radius: 25px;
+    margin: 0 auto;
+    background: rgb(255, 255, 197)
+}
+
+
+footer {
+    background-color: #333;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+} 
+
+main {
+    font-family: Arial;
+    font-size: 20px;
+    margin: 5px;
+    text-align:left;
+}
+
+#main.photo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+#main.photo-container img, 
+#main.photo-container video {
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+}
+
+#main.photo-container img:hover {
+    transform: scale(1.1);
+}
+
+
+.photo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.photo {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    justify-items: center;
+}
+
+.photo img, 
+.photo video {
+    max-width: 100%;
+    height: auto;
+}
+
+.photo video {
+    justify-items: stretch;
+    width: 200%;
+}
+
+.photo figcaption {
+    margin-left: 10px;
+}
+
+
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+
+
+
+
+
+/* Tablet view - portrait mode */
+@media (min-width:950px) {
+    * {
+        animation: none;
+        transition: none;
+
+        background-color: rgb(248, 223, 227);
+
+        body {
+            background-color: rgb(248, 223, 227);
+        }
+        nav .icon {
+            display: none;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav li {
+            margin: 0 10px;
+        }
+
+        .photo img, 
+        .photo video {
+            width: 100%;
+            height: auto;
+            max-width: 100%;
+        }
+        
+
+
+    }
+}
